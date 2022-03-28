@@ -1,15 +1,15 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 
-class CashbackHackServiceTest {
-
+public class CashbackHackServiceTest {
+    CashbackHackService service = new CashbackHackService();
     @Test
-    void shouldCashbackPurchaseAmountOnBoundary1000() {
-        CashbackHackService service = new CashbackHackService();
+  public void shouldCashbackPurchaseAmountOnBoundary1000() {
+      //  CashbackHackService service = new CashbackHackService();
 
         int expected = 0;
         int actual = service.remain(1000);
@@ -17,8 +17,8 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCashbackPurchaseAmountMoreBoundary() {
-        CashbackHackService service = new CashbackHackService();
+   public void shouldCashbackPurchaseAmountMoreBoundary() {
+     //   CashbackHackService service = new CashbackHackService();
 
         int expected = 999;
         int actual = service.remain(1001);
@@ -28,8 +28,8 @@ class CashbackHackServiceTest {
 
 
     @Test
-    void shouldCashbackPurchaseAmountLowerBoundary() {
-        CashbackHackService service = new CashbackHackService();
+    public void shouldCashbackPurchaseAmountLowerBoundary() {
+      //  CashbackHackService service = new CashbackHackService();
 
         int expected = 500;
         int actual = service.remain(500);
@@ -38,8 +38,8 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCashbackPurchaseAmountUnderBoundary() {
-        CashbackHackService service = new CashbackHackService();
+   public void shouldCashbackPurchaseAmountUnderBoundary() {
+      //  CashbackHackService service = new CashbackHackService();
 
         int expected = 5;
         int actual = service.remain(995);
@@ -48,8 +48,8 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldCashbackPurchaseAmount0() {
-        CashbackHackService service = new CashbackHackService();
+   public void shouldCashbackPurchaseAmount0() {
+      //  CashbackHackService service = new CashbackHackService();
 
         int expected = 1000;
         int actual = service.remain(0);
