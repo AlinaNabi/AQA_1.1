@@ -7,14 +7,14 @@ import static org.junit.Assert.assertEquals;
 
 public class CashbackHackServiceTest {
     CashbackHackService service = new CashbackHackService();
-//    @Test
-//  public void shouldCashbackPurchaseAmountOnBoundary1000() {
-//      //  CashbackHackService service = new CashbackHackService();
-//
-//        int expected = 0;
-//        int actual = service.remain(1000);
-//        assertEquals(actual, expected);
-//    }
+    @Test
+  public void shouldCashbackPurchaseAmountOnBoundary1000() {
+      //  CashbackHackService service = new CashbackHackService();
+
+        int expected = 0;
+        int actual = service.remain(1000);
+        assertEquals(actual, expected);
+    }
 
     @Test
    public void shouldCashbackPurchaseAmountMoreBoundary() {
